@@ -8,9 +8,10 @@
 (beacon-mode 1)
 (global-hl-line-mode 1)
 
-(setq scroll-step 1)
-(setq scroll-margin 4)
 (setq evil-want-C-u-scroll t)
+(setq scroll-conservatively 999)
+(setq scroll-step 1)
+(setq scroll-margin 1)
 (set-face-attribute 'mode-line nil
 		    :box nil
 		    :foreground (atget-xresource-color "background")
@@ -127,7 +128,7 @@
 		    :height 1.2)
  '(tab-bar ((t (:background (atget-xresources-color) :foreground "white"))))
  '(tab-line-highlight ((t (:background "black" :foreground "white"))))
-(setq org-format-latex-options (plist-put org-format-latex-options :scale 1.3))
+(setq org-format-latex-options (plist-put org-format-latex-options :scale 2))
 )
 (setq org-startup-with-inline-images t)
 (setq org-startup-with-latex-preview t)
@@ -166,7 +167,8 @@
  '(org-preview-latex-default-process 'imagemagick)
  '(org-startup-with-inline-images t)
  '(org-superstar-headline-bullets-list '(97 98 99 100))
- '(package-selected-packages '(treemacs-evil treemacs beacon xresources-theme dashboard))
+ '(package-selected-packages
+   '(nim-mode treemacs-evil treemacs beacon xresources-theme dashboard))
  '(tab-bar-close-button-show nil)
  '(tab-bar-mode t)
  '(telephone-line-mode t))
